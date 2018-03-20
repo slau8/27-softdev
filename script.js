@@ -4,27 +4,27 @@
 // K12 - Medallions...of Data!
 // 2018-03-20
 
-var us_medals = [9, 8, 6];
-var sk_medals = [5, 8, 4];
-var curr = us_medals;
+var usMedals = [9, 8, 6];
+var skMedals = [5, 8, 4];
+var curr = usMedals;
 
 var svg = document.getElementById("svg");
 var heading = document.getElementById("heading");
-var switch = document.getElementById("switch");
+var switchButton = document.getElementById("switch");
 
 var switchCountry = function(country, data){
     d3.selectAll("circle").data(data).attr("r", function(d){return 10 * d});
     d3.selectAll("text").data(data).html(function(d){return d});
-    heading.innerHTML = country
+    heading.innerHTML = country;
 }
 
 var buttonCallBack = function(e){
-    if (curr == us_medals){
-      switchCountry("South Korea", sk_medals)
+    if (curr == usMedals){
+      switchCountry("South Korea", skMedals)
     }
     else {
-    	switchCountry("United States", us_medals)
+    	switchCountry("United States", usMedals)
     }
 }
 
-switch.addEventListener("click", buttonCallBack);
+switchButton.addEventListener("click", buttonCallBack);
