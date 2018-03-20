@@ -25,7 +25,6 @@ var buttonCallBack = function(e){
     else {
     	switchCountry("United States", us_medals)
     }
-      set();
-    }
+}
 
 switch.addEventListener("click", buttonCallBack);
