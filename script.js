@@ -20,10 +20,12 @@ var switchCountry = function(country, data){
 
 var buttonCallBack = function(e){
     if (curr == usMedals){
-      switchCountry("South Korea", skMedals)
+      switchCountry("South Korea", skMedals);
+      curr = skMedals;
     }
     else {
-    	switchCountry("United States", usMedals)
+    	switchCountry("United States", usMedals);
+      curr = usMedals;
     }
 }
 
